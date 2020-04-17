@@ -1,0 +1,14 @@
+POIS:
+*       - ali se strežnik odziva ? (z izpisom Hello W...) (Odgovor: Da)
+*       - kaj če izpis v kodi spremenite iz 'Hello World\n' v 'Hello 0000000000 World\n' ?
+*            - se odziv v brskalniku spremeni brez ponovnega zagona strežnika/zgolj z osvežitvijo vsebine brskalnika (Odgovor: Ne, ni se spremenilo)
+*            - CTRL+C za prekinitev izvajanja strežnika, ponovni zagon strežnika. Kakšna je sedaj vsebina (Odgovor: Sedaj pa piše Hello 000000 World)
+*       - kako se strežnik odzove, če naslovite:
+*               - http://localhost:3000/afna (Odgovor: Še vedno je isto)
+*               - http://localhost:3000/ (Odgovor: Še vedno je isto)
+*               - http://localhost:3000/lolipop/123/jokl  (Odgovor: Še vedno je isto)
+*       - med vrstici 36 in 37 dodajte vrstico :    res.write(req.url+"\n");   in ponovno izvedite zahteve:
+*               - http://localhost:3000/afna (Odgovor: izpiše se /afna Hello 0000000000 World)
+*               - http://localhost:3000/    (Odgovor: izpiše se / Hello 0000000000 World)
+*               - http://localhost:3000/lolipop/123/jokl (Odgovor: izpiše se /lolipop/123/jokl Hello 0000000000 World)
+*        kaj opazite ???? (Odgovor: Da se sedaj izpisuje še del URL?)
